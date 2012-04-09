@@ -268,29 +268,32 @@ header {
 /* = Sidebar
  * -------------------------------------------------------------------------- */
 
-.sidebar-person {
+.sidebar-list {
+	list-style-type: none;
+	margin: 0;
+}
+.sidebar-list li {
+	height: 41px;
 	margin-top: 0.75em;
 }
-.sidebar-person img {
-	height: 41px;
+.sidebar-list li img {
+	height: 100%;
 	width: 32px;
-	float: left;
 	margin-right: 5px;
+	vertical-align: middle;
 }
-.sidebar-person p {
-	float: left;
-}
-a.sidebar-person-link {
+.sidebar-list li a {
 	color: #333;
-}
-a:hover.sidebar-person-link {
 	text-decoration: none;
+}
+.sidebar-list li a .sidebar-item {
+	height: 100%;
+}
+.sidebar-list li a:hover .sidebar-item {
 	color: #fff;
 }
-a .sidebar-person {
-	overflow: hidden;
-}
-a:hover .sidebar-person {
+
+.sidebar-list li a:hover .projects {
 	background-color: #916694;
 }
 

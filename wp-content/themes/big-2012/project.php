@@ -56,6 +56,7 @@ get_header(); ?>
 
 				<h3>Members</h3>
 				<hr />
+				<ul class="sidebar-list">
 
 				<?php if (!empty($project_member1)) : ?>
 					<?php
@@ -68,12 +69,18 @@ get_header(); ?>
 						$project_member1_photo = $person->get_field('photo');
 						$project_member1_photo = $project_member1_photo[0]['guid'];
 					?>
-						<a href="<?php echo $project_member1[0]['permalink']; ?>" class="sidebar-person-link">
-							<div class="sidebar-person">
+						<li>
+							<a href="<?php echo $project_member1[0]['permalink']; ?>">
+								<div class="sidebar-item projects">
 								<img src="<?php echo $project_member1_photo; ?>" />
-								<?php echo $project_member1[0]['forename'] . ' ' . $project_member1[0]['name']; ?>
-							</div>
-						</a>
+									<?php
+										echo $project_member1[0]['forename'];
+										if (!empty($project_member1[0]['middleinitial'])) echo " " . $project_member1[0]['middleinitial'] . ".";
+										echo " " . $project_member1[0]['name'];
+									?>
+								</div>
+							</a>
+						</li>
 				<?php endif ?>
 
 				<?php if (!empty($project_member2)) : ?>
@@ -87,12 +94,18 @@ get_header(); ?>
 						$project_member2_photo = $person->get_field('photo');
 						$project_member2_photo = $project_member2_photo[0]['guid'];
 					?>
-						<a href="<?php echo $project_member2[0]['permalink']; ?>" class="sidebar-person-link">
-							<div class="sidebar-person">
+						<li>
+							<a href="<?php echo $project_member2[0]['permalink']; ?>">
+								<div class="sidebar-item projects">
 								<img src="<?php echo $project_member2_photo; ?>" />
-								<?php echo $project_member2[0]['forename'] . ' ' . $project_member2[0]['name']; ?>
-							</div>
-						</a>
+									<?php
+										echo $project_member2[0]['forename'];
+										if (!empty($project_member2[0]['middleinitial'])) echo " " . $project_member2[0]['middleinitial'] . ".";
+										echo " " . $project_member2[0]['name'];
+									?>
+								</div>
+							</a>
+						</li>
 				<?php endif ?>
 
 				<?php if (!empty($project_member3)) : ?>
@@ -106,12 +119,18 @@ get_header(); ?>
 						$project_member3_photo = $person->get_field('photo');
 						$project_member3_photo = $project_member3_photo[0]['guid'];
 					?>
-						<a href="<?php echo $project_member3[0]['permalink']; ?>" class="sidebar-person-link">
-							<div class="sidebar-person">
+						<li>
+							<a href="<?php echo $project_member3[0]['permalink']; ?>">
+								<div class="sidebar-item projects">
 								<img src="<?php echo $project_member3_photo; ?>" />
-								<?php echo $project_member3[0]['forename'] . ' ' . $project_member3[0]['name']; ?>
-							</div>
-						</a>
+									<?php
+										echo $project_member3[0]['forename'];
+										if (!empty($project_member3[0]['middleinitial'])) echo " " . $project_member3[0]['middleinitial'] . ".";
+										echo " " . $project_member3[0]['name'];
+									?>
+								</div>
+							</a>
+						</li>
 				<?php endif ?>
 
 				<?php if (!empty($project_member4)) : ?>
@@ -125,13 +144,21 @@ get_header(); ?>
 						$project_member4_photo = $person->get_field('photo');
 						$project_member4_photo = $project_member4_photo[0]['guid'];
 					?>
-						<a href="<?php echo $project_member4[0]['permalink']; ?>" class="sidebar-person-link">
-							<div class="sidebar-person">
+						<li>
+							<a href="<?php echo $project_member4[0]['permalink']; ?>">
+								<div class="sidebar-item projects">
 								<img src="<?php echo $project_member4_photo; ?>" />
-								<?php echo $project_member4[0]['forename'] . ' ' . $project_member4[0]['name']; ?>
-							</div>
-						</a>
+									<?php
+										echo $project_member4[0]['forename'];
+										if (!empty($project_member4[0]['middleinitial'])) echo " " . $project_member4[0]['middleinitial'] . ".";
+										echo " " . $project_member4[0]['name'];
+									?>
+								</div>
+							</a>
+						</li>
 				<?php endif ?>
+
+				</ul>
 
 				<h3>Sponsors</h3>
 				<hr />
