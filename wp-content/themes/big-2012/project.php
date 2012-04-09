@@ -70,7 +70,7 @@ get_header(); ?>
 						$project_member1_photo = $project_member1_photo[0]['guid'];
 					?>
 						<li>
-							<a href="<?php echo $project_member1[0]['permalink']; ?>">
+							<a href="/people/<?php echo $project_member1[0]['permalink']; ?>">
 								<div class="sidebar-item projects">
 								<img src="<?php echo $project_member1_photo; ?>" />
 									<?php
@@ -95,7 +95,7 @@ get_header(); ?>
 						$project_member2_photo = $project_member2_photo[0]['guid'];
 					?>
 						<li>
-							<a href="<?php echo $project_member2[0]['permalink']; ?>">
+							<a href="/people/<?php echo $project_member2[0]['permalink']; ?>">
 								<div class="sidebar-item projects">
 								<img src="<?php echo $project_member2_photo; ?>" />
 									<?php
@@ -120,7 +120,7 @@ get_header(); ?>
 						$project_member3_photo = $project_member3_photo[0]['guid'];
 					?>
 						<li>
-							<a href="<?php echo $project_member3[0]['permalink']; ?>">
+							<a href="/people/<?php echo $project_member3[0]['permalink']; ?>">
 								<div class="sidebar-item projects">
 								<img src="<?php echo $project_member3_photo; ?>" />
 									<?php
@@ -145,7 +145,7 @@ get_header(); ?>
 						$project_member4_photo = $project_member4_photo[0]['guid'];
 					?>
 						<li>
-							<a href="<?php echo $project_member4[0]['permalink']; ?>">
+							<a href="/people/<?php echo $project_member4[0]['permalink']; ?>">
 								<div class="sidebar-item projects">
 								<img src="<?php echo $project_member4_photo; ?>" />
 									<?php
