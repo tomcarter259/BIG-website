@@ -293,8 +293,11 @@ header {
 	color: #fff;
 }
 
-.sidebar-list li a:hover .projects {
+.sidebar-list li a:hover .people {
 	background-color: #916694;
+}
+.sidebar-list li a:hover .projects {
+	background-color: #586990;
 }
 
 
