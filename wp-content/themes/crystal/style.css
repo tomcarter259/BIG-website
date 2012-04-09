@@ -1,0 +1,623 @@
+/*
+Theme Name: Crystal
+Author: Tom Carter
+Author URI: http://www.tomcarter.org.uk
+Description: The theme for the 2011 redesign of the Bristol Interaction and graphhics group website. It features a clean, minimalist design with a rotating project gallery on the home page.
+Version: 0.1
+*/
+
+/*
+ * This is the main css stylesheet
+ *
+ * Colourscheme:
+ *   black:      #
+ *   light gray: #
+ *   dark gray:  #
+ *   red:        #A71930
+ *   orange:     #E05206
+ *   blue:       #00257A
+ *   green:      #00693C
+ *   purple:     #622567
+ *
+ */
+
+/* = Reset Browser Defaults
+ * ---------------------------------------------------------------------------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	font-family: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+	border: 0;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+/* = Global Styles
+ * -------------------------------------------------------------------------- */
+
+body{
+	background: #fff;
+}
+hr{
+	/* TODO */
+	margin: 0 0 1.5em 0;
+	color: #ebebeb;
+}
+
+/* Text and fonts */
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 87%; /* IE6 14px */
+	color: #333;
+}
+html>body {
+	font-size: 14px; /* Ignored by IE6 */
+}
+p {
+	font-size: 1em; /* 14px */
+	line-height: 1.5em; /* 21px */
+	margin: 0 0 1.5em 0;
+	font-weight: 400;
+}
+h1 {
+	font-size: 6em; /* 84px */
+	line-height: 1em; /* 84px */
+	margin: 0.25em 0 0 0;
+	font-weight: 800;
+}
+h2 {
+	font-size: 2.4286em; /* 34px */
+	line-height: 1.2353em; /* 42px */
+	margin: 0.6176em 0 0 0;
+	font-weight: 800;
+}
+h3 {
+	font-size: 1.8571em; /* 26px */
+	line-height: 1.6154em; /* 42px */
+	margin: 0.8077em 0 0 0;
+	font-weight: 300;
+}
+h4 {
+	font-size: 1.4286em; /* 20px */
+	line-height: 1.05em; /* 21px */
+	margin: 1.05em 0 0 0;
+	font-weight: 400;
+}
+h5 {
+	font-size: 1.1429em; /* 16px */
+	line-height: 1.3125em; /* 21px */
+	margin: 1.3125em 0 0 0;
+	font-weight: 400;
+}
+ul, ol{
+	font-size: 1em; /* 14px */
+	line-height: 1.5em; /* 21px */
+	margin: 0 0 1.5em 1.5em;
+	font-weight: 400;
+}
+ul{
+	list-style-type: square;
+}
+ol{
+	list-style-type: decimal;
+}
+ol ol {
+	list-style: upper-alpha;
+}
+ol ol ol {
+	list-style: lower-roman;
+}
+ol ol ol ol {
+	list-style: lower-alpha;
+}
+code, kbd {
+	/* TODO select nicer default font? */
+	font: monospace;
+	font-size: 1em;
+	line-height: 1.5em;
+	margin: 1.5em 0 1.5em 0;
+	font-weight: 400;
+}
+#nav {
+	font-size: 1.1429em; /* 16px */
+	line-height: 1.3125em; /* 21px */
+	margin: 0;
+	font-weight: 400;
+}
+
+/* Links */
+a {
+	color: #A71930; /* red */
+	text-decoration: none;
+}
+a:focus, a:active, a:hover {
+	text-decoration: underline;
+}
+
+/* Forms */
+input[type=text], input[type=password], textarea {
+	background: #fafafa;
+	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+	border: 1px solid #ddd;
+	color: #888;
+}
+input[type=text]:focus, textarea:focus {
+	color: #373737;
+}
+
+/* = Structure
+ * -------------------------------------------------------------------------- */
+
+.container {
+	width: 960px;
+	margin: 0 auto;
+}
+#main {
+	margin: 0;
+	padding: 0;
+}
+header {
+	margin: 0;
+	padding: 0;
+}
+#title {
+	float: left;
+}
+#nav {
+	float: right;
+}
+#slideshow {
+	clear: both;
+	height: 240px;
+}
+#about {
+	float: left;
+	width: 600px;
+	margin-right: 3em;
+}
+#follow-us {
+	float: right;
+	width: 296px;
+}
+#recent-news {
+	clear: both;
+}
+footer {
+	clear: both;
+}
+
+/* = Header
+ * -------------------------------------------------------------------------- */
+
+header {
+	overflow: hidden;
+	padding-bottom: 1.5em;
+	position: relative;
+}
+#title {
+	position: absolute;
+	bottom: 1.5em;
+}
+#title a {
+	text-decoration: none;
+	color: #333;
+}
+#title a:hover {
+	text-decoration: none;
+}
+#title h2, h4 {
+	display: inline;
+}
+#title h2 {
+	font-weight: 800;
+}
+#title h4 {
+	margin-left: 0.5em;
+	font-weight: 300;
+}
+#nav li {
+	float: left;
+	list-style-type: none;
+	margin-left: 1em;
+}
+#nav li a {
+	display: block;
+	padding-top: 1em;
+	border-top-width: 0.5em;
+	border-top-style: solid;
+    -webkit-transition-duration: .15s;
+    -moz-transition-duration: .15s;
+    transition-duration: .15s;
+	color: #333;
+}
+#nav li a:hover {
+	text-decoration: none;
+	padding-top: 0;
+	border-top-width: 1.5em;
+	border-top-style: solid;
+}
+#people-link {
+	border-color: #622567; /* purple */
+}
+#publications-link {
+	border-color: #00693C; /* green */
+}
+#projects-link {
+	border-top: 0.5em solid #00257A; /* blue */
+}
+#sponsors-link {
+	border-top: 0.5em solid #E05206; /* orange */
+}
+#seminars-link {
+	border-top: 0.5em solid #A71930; /* red */
+}
+
+
+/* = Sidebar
+ * -------------------------------------------------------------------------- */
+
+.sidebar-person {
+	margin-top: 0.75em;
+}
+.sidebar-person img {
+	height: 41px;
+	width: 32px;
+	float: left;
+	margin-right: 5px;
+}
+.sidebar-person p {
+	float: left;
+}
+a.sidebar-person-link {
+	color: #333;
+}
+a:hover.sidebar-person-link {
+	text-decoration: none;
+	color: #fff;
+}
+a .sidebar-person {
+	overflow: hidden;
+}
+a:hover .sidebar-person {
+	background-color: #916694;
+}
+
+
+/* = Slideshow
+ * -------------------------------------------------------------------------- */
+
+.slide {
+	position: relative;
+	width: 100%; /* IE6 */
+}
+.slide img {
+	/*border: 1px solid #d0d0d1;*/
+}
+.slide-text {
+	position: absolute;
+}
+
+
+/* = About
+ * -------------------------------------------------------------------------- */
+
+#about p {
+	text-align: justify;
+}
+
+/* = Follow Us
+ * -------------------------------------------------------------------------- */
+
+#follow-us ul {
+	list-style-type: none;
+	float: left;
+	margin-left: 0;
+	margin-right: 2.5em;
+}
+#follow-us li {
+	line-height: 3em;
+}
+#follow-us li a {
+	display: block;
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	padding-left: 54px;
+}
+#twitter {
+	background-image: url("img/twitter-icon-grey.png");
+}
+#twitter:hover {
+	background-image: url("img/twitter-icon.png");
+}
+#facebook {
+	background-image: url("img/facebook-icon.png");
+}
+#youtube {
+	background-image: url("img/youtube-icon.png");
+}
+#google-plus {
+	background-image: url("img/gplus-icon.png");
+}
+#rss {
+	background-image: url("img/rss-icon-grey.png");
+}
+#rss:hover {
+	background-image: url("img/rss-icon.png");
+}
+
+
+/* = News
+ * -------------------------------------------------------------------------- */
+
+#news-feed {
+	float: right;
+	width: 739px;
+}
+.page-navigation {
+	margin-bottom: 1.5em;
+}
+.page-navigation .older {
+	text-align: left;
+}
+.page-navigation .newer {
+	text-align: right;
+}
+
+
+/* = People
+ * -------------------------------------------------------------------------- */
+
+.people-position {
+	clear: both;
+	overflow: hidden;
+}
+.people-header {
+	float: left;
+	width: 7.5em;
+	text-align: center;
+}
+.people-header-text h3 {
+	font-weight: 300;
+}
+.people-gallery {
+	float: left;
+	width: 61.0714em;
+}
+.people-person {
+	float: left;
+	width: 150px;
+	height: 200px;
+	margin: 0 0 1.5em 1.5em;
+}
+.people-photo {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+.people-photo img {
+	width: 100%;
+	height: 100%;
+}
+.people-name {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 3em;
+	text-align: center;
+}
+.people-photo p {
+	width 100%;
+	margin: 0.75em 0 0.75em 0;
+}
+.people-photo a .people-name {
+	background: rgb(255, 255, 255); /* fallback colour */
+	background: rgba(255, 255, 255, 0.7);
+	color: #333;
+}
+.people-photo a:hover .people-name {
+	background: rgb(255, 255, 255); /* fallback colour */
+	background: rgba(98, 37, 103, 0.7);
+	color: #fff;
+}
+.people-photo a:hover {
+	text-decoration: none;
+}
+
+
+/* = Profile
+ * -------------------------------------------------------------------------- */
+
+#profile-info h3 {
+	font-weight: 300;
+}
+#profile-left {
+	float: left;
+	width: 200px;
+}
+.profile-photo {
+	width: 200px;
+	height: 267px;
+}
+#profile-left p {
+	text-align: center;
+}
+#profile-right {
+	float: left;
+	width: 739px;
+	margin-left: 1.5em;
+}
+#profile-right h2 {
+	margin-top: 0;
+}
+#profile-right h5 {
+	margin-top: 0;
+}
+#profile-name {
+	float: left;
+	overflow: hidden;
+	margin-bottom: 1.5em;
+}
+#profile-contact {
+	margin-top: 0.75em;
+	padding: 0.75em;
+	text-align: center;
+}
+a.profile-contact-link {
+	color: #fff;
+}
+a:hover.profile-contact-link {
+	text-decoration: none;
+}
+a #profile-contact {
+	background-color: #916694;
+	border: 1px solid #855d88;
+}
+a:hover #profile-contact {
+	background-color: #622567;
+	border: 1px solid #622567;
+}
+#profile-introduction {
+	clear:both;
+}
+#profile-projects {
+	clear: both;
+}
+#profile-projects h3 {
+	font-weight: 300;
+}
+#profile-publications {
+	clear: both;
+}
+#profile-publications h3 {
+	font-weight: 300;
+}
+
+/* = Projects
+ * -------------------------------------------------------------------------- */
+
+.projects-year {
+}
+.projects-date {
+	float: left;
+	width: 7.5em; /* 105px */
+	text-align: center;
+}
+.projects-date h3 {
+	font-weight: 300;
+}
+.projects-gallery {
+	float: left;
+	width: 61.0714em; /* 855px */
+}
+.projects-project {
+	clear: both;
+	overflow: hidden;
+	margin: 0 0 1.5em 0;
+}
+.projects-photo {
+	float: left;
+	width: 14.2857em; /* 200px */
+}
+.projects-summary {
+	float: left;
+	width: 634px; /* 455px */
+	margin: 0 0 0 1.5em;
+}
+.projects-summary h5 {
+	margin-top: 0;
+}
+.projects-abstract {
+	float: left;
+	width: 634px;
+}
+
+
+/* = Project Profile
+ * -------------------------------------------------------------------------- */
+
+.project-photo {
+	width: 200px;
+	height: 200px;
+}
+#project-abstract {
+	clear: both;
+}
+
+
+/* = Footer
+ * -------------------------------------------------------------------------- */
+
+footer {
+	position: relative;
+	height: 200px;
+	background-color: #ececeb;
+	margin-bottom: 3em;
+	border: 1px solid #d9d9d9;
+}
+footer h5 {
+	margin-top: 0;
+	margin-bottom: 0.5em;
+}
+#footer-title {
+	float: left;
+	width: 161px;
+	padding: 1.5em 1.5em 0 1.5em;
+	text-align: center;
+}
+#footer-title a {
+	color: #333;
+}
+#footer-title a:hover {
+	color: #333;
+	text-decoration: none;
+}
+footer h1 {
+	margin-top: 0;
+}
+footer #search {
+	font-size: 1em;
+	padding: 1.5em 0 1.5em 0;
+}
+footer input[type=text] {
+	width: 161px;
+	height: 1.5em;
+	font-size: 1.4286em; /* 20px */
+	line-height: 1.05em; /* 21px */
+	font-weight: 400;
+}
+#contact {
+	float: left;
+	width: 200px;
+	padding: 1.5em 1.5em 0 1.5em;
+}
+footer ul {
+	float: left;
+	padding: 1.5em 1.5em 0 1.5em;
+	list-style-type: none;
+	margin: 0;
+	width: 110px;
+}
+#footer-uob-logo {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	text-align: center;
+	padding: 0 1.5em 0 1.5em;
+}
+#footer-uob-logo img {
+	width: 150px;
+}
+

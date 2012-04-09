@@ -1,0 +1,5 @@
+*~
+*.swp
+*.swo
+wp-content/uploads/*
+wp-content/gallery/*
