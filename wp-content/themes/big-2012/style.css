@@ -400,6 +400,19 @@ header {
 	margin: 0 0 1.5em 0;
 	font-weight: 300;
 }
+.post .sidebar-list {
+	margin-bottom: 1em;
+}
+.post-tags {
+}
+.post-tags a {
+	font-size: 1em; /* 14px */
+	line-height: 1.5em; /* 21px */
+	padding: 11px;
+}
+.post-tags a:hover {
+	background-color: #622567;
+}
 .content-right h3 {
 	margin: 0 0 1.5em 0;
 }

@@ -61,11 +61,8 @@
 					</ul>
 				<?php endif ?>
 
+				<span class="post-admin-links"><?php edit_post_link('Edit', '  ', ''); ?></span>
 
-				<?php $wpname = get_the_author(); echo $wpuID; ?>
-
-				<span class="post-tags"><?php the_tags('Tags: ', ' ', ''); ?></span>
-				<span class="post-admin-links"><?php edit_post_link('Edit', ' &#124; ', ''); ?></span>
 			</div>
 			<div class="content-right">
 				<h3>
