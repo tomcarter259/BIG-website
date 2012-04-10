@@ -151,7 +151,7 @@ get_header(); ?>
 					<li>
 						<a href="http://www.facebook.com/<?php echo $person_facebook; ?>">
 							<div class="sidebar-item people">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/facebook-icon.png" />
+							<img class="icon" src="<?php echo get_template_directory_uri(); ?>/img/facebook-icon.png" />
 								Facebook
 							</div>
 						</a>
