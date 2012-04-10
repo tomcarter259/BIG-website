@@ -35,9 +35,7 @@ get_header(); ?>
 	<h3>Recent News</h3>
 	<hr>
 
-	<div id="news-feed">
-		<?php get_template_part( 'loop', 'index' ); ?>
-	</div>
+	<?php get_template_part( 'loop', 'index' ); ?>
 
 </div><!-- #recent-news -->
 
