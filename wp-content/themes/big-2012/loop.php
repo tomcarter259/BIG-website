@@ -33,7 +33,16 @@
 		<?php //use unique id to style individual posts ?>
 		<div class="post" id="post-<?php the_ID(); ?>">
 			<div class="sidebar-left">
-				<p class="post-date"><strong>Posted on:</strong> <?php the_date(); ?></p>
+				<div class="post-date-container">
+					<?php $day = get_the_date('j'); ?>
+					<?php $monthYear = get_the_date('F Y'); ?>
+					<span class="day">
+						<?php echo $day; ?>
+					</span>
+					<span class="monthYear">
+						<?php echo $monthYear; ?>
+					</span>
+				</div>
 
 				<?php if ($found_author) : ?>
 					<ul class="sidebar-list">
@@ -59,9 +68,9 @@
 				<span class="post-admin-links"><?php edit_post_link('Edit', ' &#124; ', ''); ?></span>
 			</div>
 			<div class="content-right">
-				<h4>
+				<h3>
 					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-				</h4>
+				</h3>
 				<?php the_content(); ?>
 			</div>
 		</div>
