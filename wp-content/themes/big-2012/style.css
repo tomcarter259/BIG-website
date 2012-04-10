@@ -305,6 +305,9 @@ header {
 	color: #fff;
 }
 
+.sidebar-list li a:hover .homepage {
+	background-color: #916694;
+}
 .sidebar-list li a:hover .news {
 	background-color: #916694;
 }
@@ -342,40 +345,11 @@ header {
  * -------------------------------------------------------------------------- */
 
 #follow-us ul {
-	list-style-type: none;
 	float: left;
-	margin-left: 0;
-	margin-right: 2.5em;
+	width: 145px;
 }
-#follow-us li {
-	line-height: 3em;
-}
-#follow-us li a {
-	display: block;
-	background-repeat: no-repeat;
-	background-position: 10px center;
-	padding-left: 54px;
-}
-#twitter {
-	background-image: url("img/twitter-icon-grey.png");
-}
-#twitter:hover {
-	background-image: url("img/twitter-icon.png");
-}
-#facebook {
-	background-image: url("img/facebook-icon.png");
-}
-#youtube {
-	background-image: url("img/youtube-icon.png");
-}
-#google-plus {
-	background-image: url("img/gplus-icon.png");
-}
-#rss {
-	background-image: url("img/rss-icon-grey.png");
-}
-#rss:hover {
-	background-image: url("img/rss-icon.png");
+#follow-us .left {
+	margin-right: 6px;
 }
 
 
