@@ -261,7 +261,7 @@ get_header(); ?>
 							?>
 				<div class="profile-projects-project">
 					<div class="projects-photo">
-						<a href="<?php echo get_permalink(); ?><?php echo $project_slug; ?>">
+						<a href="/projects/<?php echo $project_slug; ?>">
 							<?php if (!empty($project_photo)) : ?>
 								<img class="profile-projects-photo" src="<?php echo $project_photo; ?>" alt="<?php echo $project_name ?>" />
 							<?php else : ?>
