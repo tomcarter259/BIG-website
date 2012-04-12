@@ -552,6 +552,7 @@ a:hover #profile-contact {
 	position: relative;
 	height: 100%;
 	width: 100%;
+	background-color: #586990;
 }
 .projects-name {
 	position: absolute;
@@ -586,6 +587,7 @@ a:hover #profile-contact {
 .project-photo {
 	width: 200px;
 	height: 200px;
+	background-color: #586990;
 }
 #project-abstract {
 	clear: both;
