@@ -429,6 +429,7 @@ header {
 	position: relative;
 	height: 100%;
 	width: 100%;
+	background-color: #916694;
 }
 .people-photo img {
 	width: 100%;
@@ -474,6 +475,7 @@ header {
 .profile-photo {
 	width: 200px;
 	height: 267px;
+	background-color: #916694;
 }
 #profile-left p {
 	text-align: center;
