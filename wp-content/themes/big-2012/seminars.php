@@ -38,8 +38,8 @@ get_header(); ?>
 	<div class="seminar">
 		<div class="sidebar-left">
 			<div class="post-date-container">
-				<?php $day = date('j', $seminar_date); ?>
-				<?php $monthYear = date('F Y', $seminar_date); ?>
+				<?php $day = date('j', strtotime($seminar_date)); ?>
+				<?php $monthYear = date('F Y', strtotime($seminar_date)); ?>
 				<span class="day">
 					<?php echo $day; ?>
 				</span>
@@ -63,16 +63,18 @@ get_header(); ?>
 					</li>
 			<?php endif ?>
 				<li>
+					<a href="http://www.bristol.ac.uk/conferences-hospitality/conferences/precinct/merchant/">
 					<div class="sidebar-item seminar">
 						<img src="<?php echo get_template_directory_uri(); ?>/img/location-icon.png" />
 						<?php echo $seminar_location; ?>
 					</div>
+					</a>
 				</li>
 				<li>
 					<div class="sidebar-item seminar">
 						<img src="<?php echo get_template_directory_uri(); ?>/img/time-icon.png" />
 						<?php
-							$seminar_time = date('g a', $seminar_date);
+							$seminar_time = date('g a', strtotime($seminar_date));
 							echo $seminar_time;
 						?>
 					</div>
