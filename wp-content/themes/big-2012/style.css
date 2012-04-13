@@ -304,6 +304,9 @@ header {
 .sidebar-list li a:hover .sidebar-item {
 	color: #fff;
 }
+.seminar img {
+	background-color: #A71930;
+}
 
 .sidebar-list li a:hover .homepage {
 	background-color: #bf7c87;
@@ -316,6 +319,9 @@ header {
 }
 .sidebar-list li a:hover .projects {
 	background-color: #586990;
+}
+.sidebar-list li a:hover .seminar {
+	background-color: #bf7c87;
 }
 
 
