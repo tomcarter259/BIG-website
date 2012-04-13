@@ -304,6 +304,9 @@ header {
 .sidebar-list li a:hover .sidebar-item {
 	color: #fff;
 }
+.people img {
+	background-color: #916694;
+}
 .seminar img {
 	background-color: #A71930;
 }
