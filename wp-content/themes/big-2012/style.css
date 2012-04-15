@@ -308,14 +308,14 @@ header {
 	background-color: #916694;
 }
 .seminar img {
-	background-color: #A71930;
+	background-color: #be5566;
 }
 
 .sidebar-list li a:hover .homepage {
-	background-color: #bf7c87;
+	background-color: #be5566;
 }
 .sidebar-list li a:hover .news {
-	background-color: #bf7c87;
+	background-color: #be5566;
 }
 .sidebar-list li a:hover .people {
 	background-color: #916694;
@@ -324,7 +324,7 @@ header {
 	background-color: #586990;
 }
 .sidebar-list li a:hover .seminar {
-	background-color: #bf7c87;
+	background-color: #be5566;
 }
 
 
