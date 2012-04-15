@@ -200,6 +200,10 @@ get_header(); ?>
 				</ul>
 				<?php endif ?>
 
+				<h3>Share</h3>
+				<hr />
+				<?php include(TEMPLATEPATH . '/socialLarge.php'); ?>
+
 			</div><!-- #profile-left -->
 			<div id="profile-right">
 

@@ -162,7 +162,7 @@ get_header(); ?>
 
 				<?php /* TODO Display sponsors here */ ?>
 
-				<h3>Social</h3>
+				<h3>Share</h3>
 				<hr />
 				<?php include(TEMPLATEPATH . '/socialLarge.php'); ?>
 
