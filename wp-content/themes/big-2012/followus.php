@@ -37,7 +37,7 @@
 			</a>
 		</li>
 		<li>
-			<a href="#" id="rss">
+			<a href="?feed=rss2" id="rss">
 				<div class="sidebar-item homepage">
 					<img src="<?php echo get_template_directory_uri(); ?>/img/rss-icon.png" />
 					RSS
