@@ -327,6 +327,25 @@ header {
 	background-color: #be5566;
 }
 
+.sidebar-social-left {
+	float: left;
+	width: 100px;
+	text-align: center;
+	overflow:hidden;
+	margin-bottom: 1.5em;
+}
+.sidebar-social-right {
+	float: right;
+	width: 100px;
+	text-align: center;
+}
+.twitter-share-button {
+	margin-bottom: 1.5em;
+}
+.fb-like {
+	margin-bottom: 1.5em;
+}
+
 
 /* = Slideshow
  * -------------------------------------------------------------------------- */
