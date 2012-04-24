@@ -57,13 +57,7 @@ get_header(); ?>
 					<img class="profile-photo" src="<?php echo get_template_directory_uri(); ?>/img/default-profile-image.png" />
 				<?php endif ?>
 
-				<?php if (!empty($person_email)) : ?>
-					<a href="#" class="profile-contact-link">
-						<div id="profile-contact">
-							Send <?php echo $person_forename; ?> an email
-						</div><!-- #profile-contact -->
-					</a>
-				<?php endif ?>
+				<?php include(TEMPLATEPATH . '/emailForm.php'); ?>
 
 				<?php
 					if (!empty($person_personalsite1) || !empty($person_personalsite2) 

@@ -502,6 +502,91 @@ header {
 #profile-left p {
 	text-align: center;
 }
+.black-overlay {
+	display: none;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 300%;
+	background-color: black;
+	z-index:1001;
+	-moz-opacity: 0.8;
+	opacity:.80;
+	filter: alpha(opacity=80);
+}
+.white-content {
+	display: none;
+	position: absolute;
+	top: 15%;
+	left: 35%;
+	width: 30%;
+	/*height: 70%;*/
+	padding: 16px;
+	border: none;
+	background-color: white;
+	z-index:1002;
+	overflow: auto;
+}
+#emailForm h3 {
+	margin-top: 0;
+	margin-bottom: 0.5em;
+	float: left;
+}
+#emailForm .close-button {
+	float: right;
+	height: 41px;
+	width: 32px;
+	background-color: #916694;
+}
+.close-button img {
+	height: 100%;
+	width: 100%;
+}
+#emailForm .form {
+	clear: both;
+}
+.form label {
+	display: block;
+}
+.form input[type="text"] {
+	font-size: 1em;
+	line-height: 1.5em;
+	padding: 5px;
+	color: #333;
+	background-color: #ececeb;
+	border: 1px solid #AAA;
+	margin: 5px 0 10px 0;
+}
+.form textarea {
+	font-size: 1em;
+	line-height: 1.5em;
+	padding: 5px;
+	color: #333;
+	background-color: #ececeb;
+	border: 1px solid #AAA;
+	margin: 5px 0 10px 0;
+}
+.full-width {
+	width: 97%;
+}
+.half-width{
+	width: 50%;
+}
+.submit-button {
+	background: #916694;
+	border: 1px solid #855d88;
+	font-size: 1em;
+	line-height: 1.5em;
+	color: #fff;
+	padding: 0.75em;
+	margin-top: 1em;
+}
+.submit-button:hover {
+	background-color: #622567;
+	border: 1px solid #622567;
+	text-decoration: none;
+}
 #profile-right {
 	float: left;
 	width: 739px;
@@ -525,6 +610,7 @@ header {
 }
 a.profile-contact-link {
 	color: #fff;
+	text-decoration: none;
 }
 a:hover.profile-contact-link {
 	text-decoration: none;
