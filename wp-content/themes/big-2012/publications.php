@@ -9,7 +9,15 @@ Template Name: Publications
 
 get_header(); ?>
 
-[bibtex file=bibliography.bib]
+<div id="publications" class="container">
+
+<?php
+$_GET['bib']='wp-content/themes/big-2012/bibliography.bib';
+$_GET['all']=1;
+include( 'bibtexbrowser.php' );
+?>	
+
+</div>
 
 <?php get_footer(); ?>
 

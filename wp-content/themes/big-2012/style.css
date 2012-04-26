@@ -669,6 +669,26 @@ a:hover .profile-projects-name {
 	font-weight: 300;
 }
 
+
+/* = Projects
+ * -------------------------------------------------------------------------- */
+
+#publications {
+	margin-bottom: 1.5em;
+}
+#publications .header {
+	font-size: 1.8571em; /* 26px */
+	line-height: 1.6154em; /* 42px */
+	margin: 0.8077em 0 0 0;
+	font-weight: 300;
+	border-bottom: 1px solid #9a9a9a;
+	padding-top: 0.5em;
+}
+#publications .bibitem {
+	padding-top: 1em;
+}
+
+
 /* = Projects
  * -------------------------------------------------------------------------- */
 
