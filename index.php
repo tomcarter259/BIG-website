@@ -1,18 +1,18 @@
 <?php
 /**
- * Front to the WordPress application. This file doesn't do anything, but loads
- * wp-blog-header.php which does and tells WordPress to load the theme.
+ * The main template
  *
- * @package WordPress
+ * This is used to display a page when nothing else matches. It is also 
+ * currently used as the homepage.
+ *
  */
 
-/**
- * Tells WordPress to load the WordPress theme and output it.
- *
- * @var bool
- */
-define('WP_USE_THEMES', true);
+get_header(); ?>
 
-/** Loads the WordPress Environment and Template */
-require('./wp-blog-header.php');
-?>
+
+	<div class="container">
+		<?php get_template_part( 'loop', 'index' ); ?>
+	</div>
+
+<?php get_footer(); ?>
+
