@@ -1,13 +1,13 @@
 BIG Website
 ===========
 
-This is the code for the Bristol Interaction and Graphics group website. It
-consists of Wordpress, plugins, custom modifications and the BIG-2012 theme.
+This is a Wordpress theme for the Bristol Interaction and Graphics group
+website.
 
 Documentation
 -------------
 
-Documentation can be found on the wiki page:
+Documentation will soon be available on the wiki pages:
 
 [User Documentation][user_doc] How to use the website for BIG group members.
 
