@@ -23,7 +23,7 @@
 
 	<div class="slide" id="brain-computer interaction" title="MONITORING YOUR MOOD FOR INCREASED PRODUCTIVITY">
 		<a href="/projects/bci"><img src="<?php echo get_template_directory_uri(); ?>/img/brain-computer_interaction.jpg" alt="Brain-Computer Interaction" /></a>
-		<div class="slide-text light" style="top: 130px; left: 380px;">
+		<div class="slide-text light" style="top: 130px; left: 410px;">
 			<p>Title and description will appear here</p>
 		</div>
 	</div>
