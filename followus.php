@@ -19,7 +19,7 @@
 			</a>
 		</li>
 		<li>
-			<a href="http://www.plus.google.com/BristolIG" id="google+">
+			<a href="http://plus.google.com/b/112225757256503249354/" id="google+">
 				<div class="sidebar-item homepage">
 					<img src="<?php echo get_template_directory_uri(); ?>/img/gplus-icon.png" />
 					Google+
