@@ -16,14 +16,14 @@
 
 	<div class="slide" id="fluid simulation" title="INTERACTIONS BETWEEN DEFORMABLE OBJECTS AND FLUIDS">
 		<a href="/projects/fluidsimulation"><img src="<?php echo get_template_directory_uri(); ?>/img/fluid_simulation.jpg" alt="Fluid Simulation" /></a>
-		<div class="slide-text dark" style="top: 110px; left: 550px; text-align: center;">
+		<div class="slide-text dark" style="top: 110px; left: 50px; text-align: center;">
 			<p>Title and description will appear here</p>
 		</div>
 	</div>
 
 	<div class="slide" id="brain-computer interaction" title="MONITORING YOUR MOOD FOR INCREASED PRODUCTIVITY">
 		<a href="/projects/bci"><img src="<?php echo get_template_directory_uri(); ?>/img/brain-computer_interaction.jpg" alt="Brain-Computer Interaction" /></a>
-		<div class="slide-text light" style="top: 130px; left: 50px;">
+		<div class="slide-text light" style="top: 130px; left: 250px;">
 			<p>Title and description will appear here</p>
 		</div>
 	</div>
@@ -37,7 +37,7 @@
 
 	<div class="slide" id="M.U.S.T.A.R.D." title="MULTI-USER SEE THROUGH AUGMENTED REALITY DISPLAY">
 		<a href="/projects/mustard"><img src="<?php echo get_template_directory_uri(); ?>/img/mustard.jpg" alt="MUSTARD" /></a>
-		<div class="slide-text dark" style="top: 90px; left: 550px;">
+		<div class="slide-text dark" style="top: 90px; left: 50px;">
 			<p>Title and description will appear here</p>
 		</div>
 	</div>

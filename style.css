@@ -360,6 +360,9 @@ header {
 .slide-text {
 	position: absolute;
 }
+.dark {
+	color: #e3e3e3;
+}
 
 
 /* = About
