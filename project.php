@@ -75,7 +75,7 @@ get_header(); ?>
 								<?php if (!empty($project_member1_photo)) : ?>
 									<img src="<?php echo $project_member1_photo; ?>" />
 								<?php else : ?>
-									<img src="<?php echo get_template_directory_uri(); ?>/img/default-profile-image.png" />
+									<img class="project-profile-photo" src="<?php echo get_template_directory_uri(); ?>/img/default-profile-image.png" />
 								<?php endif ?>
 									<?php
 										echo $project_member1[0]['forename'];
@@ -130,7 +130,11 @@ get_header(); ?>
 						<li>
 							<a href="/people/<?php echo $project_member3[0]['permalink']; ?>">
 								<div class="sidebar-item projects">
-								<img src="<?php echo $project_member3_photo; ?>" />
+								<?php if (!empty($project_member3_photo)) : ?>
+									<img src="<?php echo $project_member3_photo; ?>" />
+								<?php else : ?>
+									<img class="project-profile-photo" src="<?php echo get_template_directory_uri(); ?>/img/default-profile-image.png" />
+								<?php endif ?>
 									<?php
 										echo $project_member3[0]['forename'];
 										if (!empty($project_member3[0]['middleinitial'])) echo " " . $project_member3[0]['middleinitial'] . ".";
@@ -155,11 +159,102 @@ get_header(); ?>
 						<li>
 							<a href="/people/<?php echo $project_member4[0]['permalink']; ?>">
 								<div class="sidebar-item projects">
-								<img src="<?php echo $project_member4_photo; ?>" />
+								<?php if (!empty($project_member4_photo)) : ?>
+									<img src="<?php echo $project_member4_photo; ?>" />
+								<?php else : ?>
+									<img class="project-profile-photo" src="<?php echo get_template_directory_uri(); ?>/img/default-profile-image.png" />
+								<?php endif ?>
 									<?php
 										echo $project_member4[0]['forename'];
 										if (!empty($project_member4[0]['middleinitial'])) echo " " . $project_member4[0]['middleinitial'] . ".";
 										echo " " . $project_member4[0]['name'];
+									?>
+								</div>
+							</a>
+						</li>
+				<?php endif ?>
+
+				<?php if (!empty($project_member5)) : ?>
+					<?php
+						$params = array();
+						$params['where'] = 'permalink ="' . $project_member5[0]['permalink'] . '"';
+						$params['limit'] = 1;
+						$person = $people;
+						$person->findRecords($params);
+						$person->fetchRecord();
+						$project_member5_photo = $person->get_field('photo');
+						$project_member5_photo = $project_member5_photo[0]['guid'];
+					?>
+						<li>
+							<a href="/people/<?php echo $project_member5[0]['permalink']; ?>">
+								<div class="sidebar-item projects">
+								<?php if (!empty($project_member5_photo)) : ?>
+									<img src="<?php echo $project_member5_photo; ?>" />
+								<?php else : ?>
+									<img class="project-profile-photo" src="<?php echo get_template_directory_uri(); ?>/img/default-profile-image.png" />
+								<?php endif ?>
+									<?php
+										echo $project_member5[0]['forename'];
+										if (!empty($project_member5[0]['middleinitial'])) echo " " . $project_member5[0]['middleinitial'] . ".";
+										echo " " . $project_member5[0]['name'];
+									?>
+								</div>
+							</a>
+						</li>
+				<?php endif ?>
+
+				<?php if (!empty($project_member6)) : ?>
+					<?php
+						$params = array();
+						$params['where'] = 'permalink ="' . $project_member6[0]['permalink'] . '"';
+						$params['limit'] = 1;
+						$person = $people;
+						$person->findRecords($params);
+						$person->fetchRecord();
+						$project_member6_photo = $person->get_field('photo');
+						$project_member6_photo = $project_member6_photo[0]['guid'];
+					?>
+						<li>
+							<a href="/people/<?php echo $project_member6[0]['permalink']; ?>">
+								<div class="sidebar-item projects">
+								<?php if (!empty($project_member6_photo)) : ?>
+									<img src="<?php echo $project_member6_photo; ?>" />
+								<?php else : ?>
+									<img class="project-profile-photo" src="<?php echo get_template_directory_uri(); ?>/img/default-profile-image.png" />
+								<?php endif ?>
+									<?php
+										echo $project_member6[0]['forename'];
+										if (!empty($project_member6[0]['middleinitial'])) echo " " . $project_member6[0]['middleinitial'] . ".";
+										echo " " . $project_member6[0]['name'];
+									?>
+								</div>
+							</a>
+						</li>
+				<?php endif ?>
+
+				<?php if (!empty($project_member7)) : ?>
+					<?php
+						$params = array();
+						$params['where'] = 'permalink ="' . $project_member7[0]['permalink'] . '"';
+						$params['limit'] = 1;
+						$person = $people;
+						$person->findRecords($params);
+						$person->fetchRecord();
+						$project_member7_photo = $person->get_field('photo');
+						$project_member7_photo = $project_member7_photo[0]['guid'];
+					?>
+						<li>
+							<a href="/people/<?php echo $project_member7[0]['permalink']; ?>">
+								<div class="sidebar-item projects">
+								<?php if (!empty($project_member7_photo)) : ?>
+									<img src="<?php echo $project_member7_photo; ?>" />
+								<?php else : ?>
+									<img class="project-profile-photo" src="<?php echo get_template_directory_uri(); ?>/img/default-profile-image.png" />
+								<?php endif ?>
+									<?php
+										echo $project_member7[0]['forename'];
+										if (!empty($project_member7[0]['middleinitial'])) echo " " . $project_member7[0]['middleinitial'] . ".";
+										echo " " . $project_member7[0]['name'];
 									?>
 								</div>
 							</a>
