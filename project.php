@@ -72,7 +72,11 @@ get_header(); ?>
 						<li>
 							<a href="/people/<?php echo $project_member1[0]['permalink']; ?>">
 								<div class="sidebar-item projects">
-								<img src="<?php echo $project_member1_photo; ?>" />
+								<?php if (!empty($project_member1_photo)) : ?>
+									<img src="<?php echo $project_member1_photo; ?>" />
+								<?php else : ?>
+									<img src="<?php echo get_template_directory_uri(); ?>/img/default-profile-image.png" />
+								<?php endif ?>
 									<?php
 										echo $project_member1[0]['forename'];
 										if (!empty($project_member1[0]['middleinitial'])) echo " " . $project_member1[0]['middleinitial'] . ".";
@@ -97,7 +101,11 @@ get_header(); ?>
 						<li>
 							<a href="/people/<?php echo $project_member2[0]['permalink']; ?>">
 								<div class="sidebar-item projects">
-								<img src="<?php echo $project_member2_photo; ?>" />
+								<?php if (!empty($project_member2_photo)) : ?>
+									<img src="<?php echo $project_member2_photo; ?>" />
+								<?php else : ?>
+									<img src="<?php echo get_template_directory_uri(); ?>/img/default-profile-image.png" />
+								<?php endif ?>
 									<?php
 										echo $project_member2[0]['forename'];
 										if (!empty($project_member2[0]['middleinitial'])) echo " " . $project_member2[0]['middleinitial'] . ".";
