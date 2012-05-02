@@ -40,8 +40,8 @@ get_header(); ?>
 			$project_member3 = $project->get_field('member3');
 			$project_member4 = $project->get_field('member4');
 			$project_member5 = $project->get_field('member5');
-			$project_member6 = $project->get_field('member5');
-			$project_member7 = $project->get_field('member5');
+			$project_member6 = $project->get_field('member6');
+			$project_member7 = $project->get_field('member7');
 		}
 	?>
 
