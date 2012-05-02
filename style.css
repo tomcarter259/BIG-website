@@ -755,6 +755,9 @@ a:hover .projects-name {
 	height: 200px;
 	background-color: #586990;
 }
+.project-profile-photo {
+	background-color: #586990;
+}
 #project-abstract {
 	clear: both;
 }
