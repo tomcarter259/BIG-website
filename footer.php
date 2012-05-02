@@ -32,9 +32,11 @@
 		<li>
 		<a href="/seminars/">Seminars</a>
 		</li>
+<!--
 		<li>
 		<a href="/news/">News</a>
 		</li>
+-->
 	</ul>
 	<ul>
 		<lh><h5>Elsewhere</h5></lh>
@@ -48,7 +50,7 @@
 		<a href="http://www.youtube.com/BristolIG">Youtube</a>
 		</li>
 		<li>
-		<a href="www.plus.google.com/BristolIG">Google+</a>
+		<a href="http://plus.google.com/b/112225757256503249354/">Google+</a>
 		</li>
 		<li>
 		<a href="#">RSS Feed</a>
