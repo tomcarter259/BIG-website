@@ -7,11 +7,7 @@ website.
 Documentation
 -------------
 
-Documentation will soon be available on the wiki pages:
-
-[User Documentation][user_doc] How to use the website for BIG group members.
-
-[Developer Documentation][dev_doc] Contribute to the BIG website.
+Maybe one day...
 
 Quick Links
 -----------
