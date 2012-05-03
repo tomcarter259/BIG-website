@@ -12,7 +12,7 @@ get_header(); ?>
 <div id="publications" class="container">
 
 <?php
-$_GET['bib']='wp-content/themes/BIG-website/big.bib';
+$_GET['bib']='big.bib';
 $_GET['all']=1;
 include( 'bibtexbrowser.php' );
 ?>	
