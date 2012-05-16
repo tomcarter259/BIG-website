@@ -79,7 +79,7 @@ get_header(); ?>
 					<div class="sidebar-item seminar">
 						<img src="<?php echo get_template_directory_uri(); ?>/img/time-icon.png" />
 						<?php
-							$seminar_time = date('g a', strtotime($seminar_date));
+							$seminar_time = date('g:i a', strtotime($seminar_date));
 							echo $seminar_time;
 						?>
 					</div>
