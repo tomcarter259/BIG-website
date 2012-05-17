@@ -69,6 +69,9 @@ p {
 	margin: 0 0 1.5em 0;
 	font-weight: 400;
 }
+strong {
+	font-weight: 700;
+}
 h1 {
 	font-size: 6em; /* 84px */
 	line-height: 1em; /* 84px */
