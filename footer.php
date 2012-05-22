@@ -32,6 +32,9 @@
 		<li>
 		<a href="/seminars/">Seminars</a>
 		</li>
+		<li>
+		<a href="http://www.bris.ac.uk/web/policies/use-of-cookies.html">Cookie Policy</a>
+		</li>
 <!--
 		<li>
 		<a href="/news/">News</a>
