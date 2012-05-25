@@ -49,7 +49,11 @@
 						<li>
 							<a href="/people/<?php echo $author_permalink; ?>">
 								<div class="sidebar-item news">
-									<img src="<?php echo $author_photo; ?>" />
+									<?php if (!empty($author_photo)) : ?>
+										<img src="<?php echo $author_photo; ?>" />
+									<?php else : ?>
+										<img class="project-profile-photo" src="<?php echo get_template_directory_uri(); ?>/img/default-profile-image.png" />
+									<?php endif ?>
 									<?php
 										echo $author_forename;
 										if (!empty($author_initial)) echo " " . $author_initial . ".";
