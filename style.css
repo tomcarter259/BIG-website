@@ -417,6 +417,9 @@ header {
 .post .sidebar-list {
 	margin-bottom: 1em;
 }
+.post-profile-image {
+	background-color: #be5566;
+}
 .content-right h3 {
 	margin: 0 0 1.5em 0;
 }
