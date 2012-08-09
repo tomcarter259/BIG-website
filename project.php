@@ -23,8 +23,7 @@ get_header(); ?>
 
 			$project_name       = $project->get_field('name');
 			$project_subtitle   = $project->get_field('subtitle');
-			$project_photo      = $project->get_field('photo');
-			$project_photo      = $project_photo[0]['guid'];
+			$project_flickr_tag = $project->get_field('flickrTag');
 			$project_abstract   = $project->get_field('abstract');
 			$project_abstract   = wpautop ($project_abstract);
 			$project_slug         = $project->get_field('permalink');
@@ -310,11 +309,19 @@ get_header(); ?>
 					</div><!-- #project-videos -->
 				<?php endif ?>
 
-				<?php if (!empty($project_gallery)) : ?>
+				<?php if (!empty($project_flickr_tag)) : ?>
 					<div id="project-photos">
 						<h3>Photos</h3>
 						<hr />
-						<?php echo do_shortcode('[nggallery id=' . $project_gallery . ']'); ?>
+
+						<object width="740" height="555">
+							<param name="flashvars" value="offsite=true&lang=en-us&page_show_url=%2Fgroups%2F2000562%40N25%2Fpool%2Ftags%2F<? echo $project_flickr_tag; ?>%2Fshow%2F&page_show_back_url=%2Fgroups%2F2000562%40N25%2Fpool%2Ftags%2F<? echo $project_flickr_tag; ?>%2F&group_id=2000562@N25&tags=<? echo $project_flickr_tag; ?>&jump_to=&start_index="></param>
+							<param name="movie" value="http://www.flickr.com/apps/slideshow/show.swf?v=109615"></param>
+							<param name="allowFullScreen" value="true"></param>
+							<embed type="application/x-shockwave-flash" src="http://www.flickr.com/apps/slideshow/show.swf?v=109615" allowFullScreen="true" flashvars="offsite=true&lang=en-us&page_show_url=%2Fgroups%2F2000562%40N25%2Fpool%2Ftags%2F<? echo $project_flickr_tag; ?>%2Fshow%2F&page_show_back_url=%2Fgroups%2F2000562%40N25%2Fpool%2Ftags%2F<? echo $project_flickr_tag; ?>%2F&group_id=2000562@N25&tags=<? echo $project_flickr_tag; ?>&jump_to=&start_index=" width="740" height="555"></embed>
+						</object>
+
+
 					</div><!-- #project-photos -->
 				<?php endif ?>
 
