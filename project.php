@@ -25,15 +25,16 @@ get_header(); ?>
 			$project_subtitle   = $project->get_field('subtitle');
 			$project_photo      = $project->get_field('photo');
 			$project_photo      = $project_photo[0]['guid'];
-			$project_flickr_tag = $project->get_field('flickrTag');
 			$project_abstract   = $project->get_field('abstract');
 			$project_abstract   = wpautop ($project_abstract);
 			$project_slug         = $project->get_field('permalink');
-			$project_members = $project->get_field('members');
+			//$project_members = $project->get_field('members');
+			$project_publications = $project->get_field('publications');
 			$project_video1 = $project->get_field('video1');
 			$project_video2 = $project->get_field('video2');
 			$project_video3 = $project->get_field('video3');
 			$project_video4 = $project->get_field('video4');
+			$project_flickr_tag = $project->get_field('flickrTag');
 			$project_details = $project->get_field('details');
 			$project_member1 = $project->get_field('member1');
 			$project_member2 = $project->get_field('member2');
@@ -285,6 +286,14 @@ get_header(); ?>
 						<hr />
 						<?php echo $project_abstract ?>
 					</div><!-- #project-abstract -->
+				<?php endif ?>
+
+				<?php if (!empty($project_publications)) : ?>
+					<div id="project-publications">
+						<h3>Publications</h3>
+						<hr />
+						<?php echo $project_publications; ?>
+					</div>
 				<?php endif ?>
 
 				<?php if (!empty($project_video1) || !empty($project_video2) || !empty($project_video3) || !empty($project_video4)) : ?>
