@@ -23,11 +23,12 @@ get_header(); ?>
 
 			$project_name       = $project->get_field('name');
 			$project_subtitle   = $project->get_field('subtitle');
+			$project_photo      = $project->get_field('photo');
+			$project_photo      = $project_photo[0]['guid'];
 			$project_flickr_tag = $project->get_field('flickrTag');
 			$project_abstract   = $project->get_field('abstract');
 			$project_abstract   = wpautop ($project_abstract);
 			$project_slug         = $project->get_field('permalink');
-			$project_gallery = $project->get_field('photos');
 			$project_members = $project->get_field('members');
 			$project_video1 = $project->get_field('video1');
 			$project_video2 = $project->get_field('video2');
