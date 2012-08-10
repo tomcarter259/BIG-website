@@ -37,6 +37,8 @@ get_header(); ?>
 			$project_flickr_tag = $project->get_field('flickrTag');
 			$project_details = $project->get_field('details');
 			$project_press = $project->get_field('press');
+			$project_custom_header_1 = $project->get_field('customheader1');
+			$project_custom_section_1 = $project->get_field('customsection1');
 			$project_member1 = $project->get_field('member1');
 			$project_member2 = $project->get_field('member2');
 			$project_member3 = $project->get_field('member3');
@@ -336,6 +338,14 @@ get_header(); ?>
 					</div><!-- #project-photos -->
 				<?php endif ?>
 
+				<?php if (!empty($project_press)) : ?>
+					<div id="project-press">
+						<h3>Press</h3>
+						<hr />
+						<?php echo $project_press; ?>
+					</div>
+				<?php endif ?>
+
 				<?php if (!empty($project_details)) : ?>
 					<div id="project-details">
 						<h3>Details</h3>
@@ -344,12 +354,12 @@ get_header(); ?>
 					</div><!-- #project-details -->
 				<?php endif ?>
 
-				<?php if (!empty($project_press)) : ?>
-					<div id="project-press">
-						<h3>Press</h3>
+				<?php if (!empty($project_custom_header_1)) : ?>
+					<div id="project-custom-1">
+						<h3><?php echo $project_custom_header_1; ?></h3>
 						<hr />
-						<?php echo $project_press; ?>
-					</div>
+						<?php echo $project_custom_section_1; ?>
+					</div><!-- #project-custom-1 -->
 				<?php endif ?>
 
 			</div><!-- #profile-right -->
