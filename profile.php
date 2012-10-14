@@ -289,9 +289,9 @@ get_header(); ?>
 					<div>
 						<h3>Send <?php echo $person_forename; ?> an Email</h3>
 						<hr />
-						<?php //include(TEMPLATEPATH . '/contact.php'); ?>
+						<?php include(TEMPLATEPATH . '/contact.php'); ?>
 					</div>
-				<? endif ?>
+				<?php endif ?>
 
 				<?php /* TODO: put publications here */ ?>
 
