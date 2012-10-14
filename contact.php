@@ -116,9 +116,8 @@ if(isset($_POST['submit'])) {
 	<div>
 		<label for="message"><strong>Message:</strong></label>
 		<textarea rows="8" cols="66" style="width: 376px" name="message"
-				id="message" class="required">
-			<?php echo $_POST['message']; ?>
-		</textarea>
+				id="message"
+				class="required"><?php echo $_POST['message']; ?></textarea>
 	</div>
 
 	<!-- The following field is for robots only, invisible to humans: -->
