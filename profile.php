@@ -283,6 +283,15 @@ get_header(); ?>
 					<?php endif ?>
 				</div><!-- #profile-projects -->
 
+				<!-- Contact form -->
+				<?php if (!empty($person_email)) : ?>
+					<a name="contact"></a>
+					<div>
+						<h3>Send <?php echo $person_forename; ?> an Email</h3>
+						<hr />
+						<?php //include(TEMPLATEPATH . '/contact.php'); ?>
+					</div>
+				<? endif ?>
 
 				<?php /* TODO: put publications here */ ?>
 
