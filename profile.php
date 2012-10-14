@@ -40,8 +40,10 @@ get_header(); ?>
 			$person_youtube       = $person->get_field('youtube');
 			$person_linkedin      = $person->get_field('linkedin');
 			$person_github        = $person->get_field('github');
+			$person_publications  = $person->get_field('publications');
 
 			$person_bio           = wpautop( $person_bio);
+			$person_publications  = wpautop( $person_publications);
 			$person_photo         = $person_photo[0]['guid'];
 		}
 	?>
@@ -282,6 +284,15 @@ get_header(); ?>
 						<?php endwhile ?>
 					<?php endif ?>
 				</div><!-- #profile-projects -->
+
+				<!-- Publications -->
+				<?php if (!empty($person_publications)) : ?>
+					<div>
+						<h3>Publications</h3>
+						<hr />
+						<?php echo $person_publications; ?>
+					</div>
+				<?php endif ?>
 
 				<!-- Contact form -->
 				<?php if (!empty($person_email)) : ?>
