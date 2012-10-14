@@ -88,113 +88,56 @@ get_header(); ?>
 		</div><!-- #profile-left -->
 
 
-			<div id="profile-right">
+		<!-- Right column -->
+		<div id="profile-right">
 
-				<div id="profile-name">
-					<h2><?php 
-						echo $person_forename;
-						if (!empty($person_initial)) echo " " . $person_initial . ".";
-						echo " " . $person_surname; 
-					?></h2>
-					<h5><?php echo $person_jobtitle; ?></h5>
-				</div><!-- #profile-name -->
-
-
-				<?php if (!empty($person_bio)) : ?>
-					<div id="profile-introduction">
-						<h3>Introduction</h3>
-						<hr />
-						<?php echo $person_bio ?>
-					</div><!-- #profile-introduction -->
-				<?php endif ?>
+			<!-- Header -->
+			<div id="profile-name">
+				<h2><?php echo $person_forename;
+					if (!empty($person_initial)) echo " " . $person_initial . ".";
+					echo " " . $person_surname; ?></h2>
+				<h5><?php echo $person_jobtitle; ?></h5>
+			</div><!-- #profile-name -->
 
 
-				<div id="profile-projects">
-					<h3>Projects</h3>
+			<!-- Bioggraphy -->
+			<?php if (!empty($person_bio)) : ?>
+				<div id="profile-introduction">
+					<h3>Introduction</h3>
 					<hr />
-					<?php
-						$projects = new Pod('projects');
-						$params = array();
-						$params['orderby'] = 'name ASC';
-						$params['limit'] = -1;
-						$projects->findRecords($params);
-						$total_projects = $projects->getTotalRows();
-					?>
-					<?php if ($total_projects > 0) : ?>
-						<?php while ($projects->fetchRecord()) : ?>
-							<?php
-								$project_member1 = $projects->get_field('member1');
-								$project_member1 = $project_member1[0]['permalink'];
-								$project_member2 = $projects->get_field('member2');
-								$project_member2 = $project_member2[0]['permalink'];
-								$project_member3 = $projects->get_field('member3');
-								$project_member3 = $project_member3[0]['permalink'];
-								$project_member4 = $projects->get_field('member4');
-								$project_member4 = $project_member4[0]['permalink'];
-								$project_member5 = $projects->get_field('member5');
-								$project_member5 = $project_member5[0]['permalink'];
-							?>
-							<?php if (
-								$project_member1 == $person_slug ||
-								$project_member2 == $person_slug ||
-								$project_member3 == $person_slug ||
-								$project_member4 == $person_slug ||
-								$project_member5 == $person_slug
-							) : ?>
-							<?php
-								$project_name  = $projects->get_field('name');
-								$project_photo = $projects->get_field('photo');
-								$project_photo = $project_photo[0]['guid'];
-								$project_slug  = $projects->get_field('permalink');
-							?>
-				<div class="profile-projects-project">
-					<div class="projects-photo">
-						<a href="/projects/<?php echo $project_slug; ?>">
-							<?php if (!empty($project_photo)) : ?>
-								<img class="profile-projects-photo" src="<?php echo $project_photo; ?>" alt="<?php echo $project_name ?>" />
-							<?php else : ?>
-								<img class="profile-projects-photo" src="<?php echo get_template_directory_uri(); ?>/img/default-project-image.png" />
-							<?php endif ?>
-							<div class="profile-projects-name">
-								<p><?php echo $project_name; ?></p>
-							</div>
-						</a>
-					</div><!-- .projects-photo -->
+					<?php echo $person_bio ?>
+				</div><!-- #profile-introduction -->
+			<?php endif ?>
+
+			<!-- Projects -->
+			<?php include(TEMPLATEPATH . '/profileProjects.php'); ?>
+
+			<!-- Publications -->
+			<?php if (!empty($person_publications)) : ?>
+				<div>
+					<h3>Publications</h3>
+					<hr />
+					<?php echo $person_publications; ?>
 				</div>
-							<?php endif ?>
-						<?php endwhile ?>
-					<?php endif ?>
-				</div><!-- #profile-projects -->
+			<?php endif ?>
 
-				<!-- Publications -->
-				<?php if (!empty($person_publications)) : ?>
-					<div>
-						<h3>Publications</h3>
-						<hr />
-						<?php echo $person_publications; ?>
-					</div>
-				<?php endif ?>
+			<!-- Contact form -->
+			<?php if (!empty($person_email)) : ?>
+				<a name="contact"></a>
+				<div>
+					<h3>Send <?php echo $person_forename; ?> an Email</h3>
+					<hr />
+					<?php include(TEMPLATEPATH . '/contact.php'); ?>
+				</div>
+			<?php endif ?>
 
-				<!-- Contact form -->
-				<?php if (!empty($person_email)) : ?>
-					<a name="contact"></a>
-					<div>
-						<h3>Send <?php echo $person_forename; ?> an Email</h3>
-						<hr />
-						<?php include(TEMPLATEPATH . '/contact.php'); ?>
-					</div>
-				<?php endif ?>
-
-				<?php /* TODO: put publications here */ ?>
+		</div><!-- #profile-right -->
+	</div><!-- #profile-info -->
 
 
-			</div><!-- #profile-right -->
-		</div><!-- #profile-info -->
+<?php else: ?>
 
-
-	<?php else: ?>
-
-	<?php endif ?>
+<?php endif ?>
 
 <?php get_footer(); ?>
 
