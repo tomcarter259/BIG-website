@@ -9,204 +9,85 @@ Template Name: Profile
 
 get_header(); ?>
 
-	<?php
-		$found_person = false;
+<!-- Get person's details -->
+<?php
+	$found_person = false;
 
-		global $pods;
-		$person_slug = pods_url_variable(-1);
-		$person = new Pod('people', $person_slug);
+	global $pods;
+	$person_slug = pods_url_variable(-1);
+	$person = new Pod('people', $person_slug);
 
-		if( !empty($person->data))
-		{
-			$found_person = true;
+	if( !empty($person->data))
+	{
+		$found_person = true;
 
-			$person_surname       = $person->get_field('name');
-			$person_initial       = $person->get_field('middleinitial');
-			$person_forename      = $person->get_field('forename');
-			$person_position      = $person->get_field('position');
-			$person_jobtitle      = $person->get_field('jobtitle');
-			$person_photo         = $person->get_field('photo');
-			$person_email         = $person->get_field('email');
-			$person_bio           = $person->get_field('bio');
-			$person_personalsite1 = $person->get_field('personalsite1');
-			$person_personalsite2 = $person->get_field('personalsite2');
-			$person_personalsite3 = $person->get_field('personalsite3');
-			$person_personalblog1 = $person->get_field('personalblog1');
-			$person_personalblog2 = $person->get_field('personalblog2');
-			$person_personalblog3 = $person->get_field('personalblog3');
-			$person_twitter       = $person->get_field('twitter');
-			$person_facebook      = $person->get_field('facebook');
-			$person_googleplus    = $person->get_field('googleplus');
-			$person_youtube       = $person->get_field('youtube');
-			$person_linkedin      = $person->get_field('linkedin');
-			$person_github        = $person->get_field('github');
-			$person_publications  = $person->get_field('publications');
+		$person_surname       = $person->get_field('name');
+		$person_initial       = $person->get_field('middleinitial');
+		$person_forename      = $person->get_field('forename');
+		$person_position      = $person->get_field('position');
+		$person_jobtitle      = $person->get_field('jobtitle');
+		$person_photo         = $person->get_field('photo');
+		$person_email         = $person->get_field('email');
+		$person_bio           = $person->get_field('bio');
+		$person_personalsite1 = $person->get_field('personalsite1');
+		$person_personalsite2 = $person->get_field('personalsite2');
+		$person_personalsite3 = $person->get_field('personalsite3');
+		$person_personalblog1 = $person->get_field('personalblog1');
+		$person_personalblog2 = $person->get_field('personalblog2');
+		$person_personalblog3 = $person->get_field('personalblog3');
+		$person_twitter       = $person->get_field('twitter');
+		$person_facebook      = $person->get_field('facebook');
+		$person_googleplus    = $person->get_field('googleplus');
+		$person_youtube       = $person->get_field('youtube');
+		$person_linkedin      = $person->get_field('linkedin');
+		$person_github        = $person->get_field('github');
+		$person_publications  = $person->get_field('publications');
 
-			$person_bio           = wpautop( $person_bio);
-			$person_publications  = wpautop( $person_publications);
-			$person_photo         = $person_photo[0]['guid'];
-		}
-	?>
+		$person_bio           = wpautop( $person_bio);
+		$person_publications  = wpautop( $person_publications);
+		$person_photo         = $person_photo[0]['guid'];
+	}
+?>
 
-	<?php if ($found_person) : ?>
+<?php if ($found_person) : ?>
 
-		<div id="profile-info" class="container">
-			<div id="profile-left">
+	<div id="profile-info" class="container">
 
-				<?php if (!empty($person_photo)) : ?>
-					<img class="profile-photo" src="<?php echo $person_photo; ?>" alt="<?php echo $person_forename . " " . $person_surname ?>" />
-				<?php else : ?>
-					<img class="profile-photo" src="<?php echo get_template_directory_uri(); ?>/img/default-profile-image.png" />
-				<?php endif ?>
+		<!-- Left column -->
+		<div id="profile-left">
 
-<?php if (!empty($person_email)) : ?>
+			<!-- Profile photo -->
+			<?php if (!empty($person_photo)) : ?>
+				<img class="profile-photo" src="<?php echo $person_photo; ?>"
+						alt="<?php echo $person_forename . " " .
+								$person_surname ?>" />
+			<?php else : ?>
+				<?php $default_img = get_template_directory_uri() .
+						"/img/default-profile-image.png"; ?>
+				<img class="profile-photo"
+						src="<?php echo $default_img; ?>" />
+			<?php endif ?>
+
+			<!-- Contact button -->
+			<?php if (!empty($person_email)) : ?>
 				<a href="#contact" class="profile-contact-link">
 					<div id="profile-contact">
 						Send <?php echo $person_forename; ?> an email
 					</div>
 				</a>
-<?php endif ?>
+			<?php endif ?>
 
-				<?php
-					if (!empty($person_personalsite1) || !empty($person_personalsite2) 
-						|| !empty($person_personalsite3) || !empty($person_personalblog1)
-						|| !empty($person_personalblog2) || !empty($person_personalblog3)
-						|| !empty($person_twitter) || !empty($person_facebook)
-						|| !empty($person_googleplus) || !empty($person_youtube)
-						|| !empty($person_linkedin) || !empty($person_github)) :
-				?>
+			<!-- On the Web buttons -->
+			<?php include(TEMPLATEPATH . '/onTheWeb.php'); ?>
 
-				<h3>On the Web</h3>
-				<hr />
-				<ul class="sidebar-list">
-					<?php if (!empty($person_personalsite1)) : ?>
-					<li>
-						<a href="<?php echo $person_personalsite1; ?>">
-							<div class="sidebar-item people">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/personal-site-icon.png" />
-								Personal Website
-							</div>
-						</a>
-					</li>
-					<?php endif ?>
-					<?php if (!empty($person_personalsite2)) : ?>
-					<li>
-						<a href="<?php echo $person_personalsite2; ?>">
-							<div class="sidebar-item people">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/personal-site-icon.png" />
-								Other Personal Website
-							</div>
-						</a>
-					</li>
-					<?php endif ?>
-					<?php if (!empty($person_personalsite3)) : ?>
-					<li>
-						<a href="<?php echo $person_personalsite3; ?>">
-							<div class="sidebar-item people">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/personal-site-icon.png" />
-								Other Personal Website
-							</div>
-						</a>
-					</li>
-					<?php endif ?>
-					<?php if (!empty($person_personalblog1)) : ?>
-					<li>
-						<a href="<?php echo $person_personalblog1; ?>">
-							<div class="sidebar-item people">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/personal-blog-icon.png" />
-								Personal Blog
-							</div>
-						</a>
-					</li>
-					<?php endif ?>
-					<?php if (!empty($person_personalblog2)) : ?>
-					<li>
-						<a href="<?php echo $person_personalblog2; ?>">
-							<div class="sidebar-item people">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/personal-blog-icon.png" />
-								Personal Blog
-							</div>
-						</a>
-					</li>
-					<?php endif ?>
-					<?php if (!empty($person_personalblog3)) : ?>
-					<li>
-						<a href="<?php echo $person_personalblog3; ?>">
-							<div class="sidebar-item people">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/personal-blog-icon.png" />
-								Personal Blog
-							</div>
-						</a>
-					</li>
-					<?php endif ?>
-					<?php if (!empty($person_twitter)) : ?>
-					<li>
-						<a href="http://www.twitter.com/<?php echo $person_twitter; ?>">
-							<div class="sidebar-item people">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/twitter-icon.png" />
-								Twitter
-							</div>
-						</a>
-					</li>
-					<?php endif ?>
-					<?php if (!empty($person_facebook)) : ?>
-					<li>
-						<a href="http://www.facebook.com/<?php echo $person_facebook; ?>">
-							<div class="sidebar-item people">
-							<img class="icon" src="<?php echo get_template_directory_uri(); ?>/img/facebook-icon.png" />
-								Facebook
-							</div>
-						</a>
-					</li>
-					<?php endif ?>
-					<?php if (!empty($person_googleplus)) : ?>
-					<li>
-						<a href="<?php echo $person_googleplus; ?>">
-							<div class="sidebar-item people">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/gplus-icon.png" />
-								Google+
-							</div>
-						</a>
-					</li>
-					<?php endif ?>
-					<?php if (!empty($person_youtube)) : ?>
-					<li>
-						<a href="http://www.youtube.com/<?php echo $person_youtube; ?>">
-							<div class="sidebar-item people">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/youtube-icon.png" />
-								Youtube
-							</div>
-						</a>
-					</li>
-					<?php endif ?>
-					<?php if (!empty($person_linkedin)) : ?>
-					<li>
-						<a href="http://www.linkedin.com/in/<?php echo $person_linkedin; ?>">
-							<div class="sidebar-item people">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/linkedin-icon.png" />
-								Linkedin
-							</div>
-						</a>
-					</li>
-					<?php endif ?>
-					<?php if (!empty($person_github)) : ?>
-					<li>
-						<a href="http://www.github.com/<?php echo $person_github; ?>">
-							<div class="sidebar-item people">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/github-icon.png" />
-								Github
-							</div>
-						</a>
-					</li>
-					<?php endif ?>
-				</ul>
-				<?php endif ?>
+			<!-- Share buttons -->
+			<h3>Share</h3>
+			<hr />
+			<?php include(TEMPLATEPATH . '/socialLarge.php'); ?>
 
-				<h3>Share</h3>
-				<hr />
-				<?php include(TEMPLATEPATH . '/socialLarge.php'); ?>
+		</div><!-- #profile-left -->
 
-			</div><!-- #profile-left -->
+
 			<div id="profile-right">
 
 				<div id="profile-name">
