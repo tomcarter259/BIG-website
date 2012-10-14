@@ -45,8 +45,16 @@
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|Open+Sans+Condensed:300,300italic' rel='stylesheet' type='text/css'>
 
 
-<!-- include jQuery library -->
+<!-- include jQuery libraries -->
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script src="http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.pack.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+        $("#contactform").validate();
+});
+</script>
+
 <!-- include Cycle plugin -->
 <script type="text/javascript" src="http://cloud.github.com/downloads/malsup/cycle/jquery.cycle.all.latest.js"></script>
 

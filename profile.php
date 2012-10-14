@@ -57,7 +57,13 @@ get_header(); ?>
 					<img class="profile-photo" src="<?php echo get_template_directory_uri(); ?>/img/default-profile-image.png" />
 				<?php endif ?>
 
-				<?php //include(TEMPLATEPATH . '/emailForm.php'); ?>
+<?php if (!empty($person_email)) : ?>
+				<a href="#contact" class="profile-contact-link">
+					<div id="profile-contact">
+						Send <?php echo $person_forename; ?> an email
+					</div>
+				</a>
+<?php endif ?>
 
 				<?php
 					if (!empty($person_personalsite1) || !empty($person_personalsite2) 
@@ -219,6 +225,7 @@ get_header(); ?>
 					</div><!-- #profile-introduction -->
 				<?php endif ?>
 
+
 				<div id="profile-projects">
 					<h3>Projects</h3>
 					<hr />
@@ -276,7 +283,18 @@ get_header(); ?>
 					<?php endif ?>
 				</div><!-- #profile-projects -->
 
+				<!-- Contact form -->
+				<?php if (!empty($person_email)) : ?>
+					<a name="contact"></a>
+					<div>
+						<h3>Send <?php echo $person_forename; ?> an Email</h3>
+						<hr />
+						<?php include(TEMPLATEPATH . '/contact.php'); ?>
+					</div>
+				<? endif ?>
+
 				<?php /* TODO: put publications here */ ?>
+
 
 			</div><!-- #profile-right -->
 		</div><!-- #profile-info -->
