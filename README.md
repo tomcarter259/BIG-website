@@ -7,7 +7,7 @@ website.
 Documentation
 -------------
 
-Maybe one day...
+Maybe one day..
 
 Quick Links
 -----------
