@@ -16,7 +16,7 @@
 
 	<div class="slide" id="morphees" title="SHAPE-SHIFTING MOBILE DEVICES">
 		<a href="/projects/morphees"><img src="<?php echo get_template_directory_uri(); ?>/img/morphees.jpg" alt="morphees" /></a>
-		<div class="slide-text light" style="top: 100px; left: 550px;">
+		<div class="slide-text light" style="top: 90px; left: 50px;">
 			<p>Title and description will appear here</p>
 		</div><!-- .slide-text -->
 	</div><!-- .slide -->
