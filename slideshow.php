@@ -14,6 +14,13 @@
 		</div><!-- .slide-text -->
 	</div><!-- .slide -->
 
+	<div class="slide" id="morphees" title="SHAPE-SHIFTING MOBILE DEVICES">
+		<a href="/projects/morphees"><img src="<?php echo get_template_directory_uri(); ?>/img/morphees.jpg" alt="morphees" /></a>
+		<div class="slide-text light" style="top: 100px; left: 550px;">
+			<p>Title and description will appear here</p>
+		</div><!-- .slide-text -->
+	</div><!-- .slide -->
+
 	<div class="slide" id="M.U.S.T.A.R.D." title="MULTI-USER SEE THROUGH AUGMENTED REALITY DISPLAY">
 		<a href="/projects/mustard"><img src="<?php echo get_template_directory_uri(); ?>/img/mustard.jpg" alt="MUSTARD" /></a>
 		<div class="slide-text dark" style="top: 90px; left: 50px;">
@@ -23,7 +30,7 @@
 
 	<div class="slide" id="PiVOT" title="MULTIVIEW TABLETOP WITH SHARED AND PERSONAL SPACES">
 		<a href="/projects/pivot"><img src="<?php echo get_template_directory_uri(); ?>/img/PiVOT.jpg" alt="PiVOT" /></a>
-		<div class="slide-text dark" style="top: 100px; left: 550px;">
+		<div class="slide-text dark" style="top: 100px; left: 540px;">
 			<p>Title and description will appear here</p>
 		</div>
 	</div>
